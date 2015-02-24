@@ -39,3 +39,8 @@ allow system_app time_daemon:unix_stream_socket connectto;
 
 # access to color service SDK
 allow system_app color_service:service_manager add;
+
+# Allow to read thermal sysfs
+allow system_app sysfs_thermal:dir search;
+allow system_app sysfs_thermal:file rw_file_perms;
+allow system_app sysfs_thermal:lnk_file rw_file_perms;
